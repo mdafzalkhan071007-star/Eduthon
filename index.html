@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Mental Health Support</title>
+    <link rel="stylesheet" href="mixed.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%),
+                url('https://i.imgur.com/4Z3w2gK.png') no-repeat center center / 200px,
+                url('https://i.imgur.com/8wY4zJf.png') no-repeat top left / 150px,
+                url('https://i.imgur.com/2nX8zLp.png') no-repeat bottom right / 150px;
+            background-size: cover, 200px, 150px, 150px;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-weight: 300;
+        }
+
+        .hero-section p {
+            font-size: 1.4rem;
+            max-width: 700px;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .features-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .features-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-item h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .feature-item p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+
+
+        .bottom-buttons {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 1000;
+        }
+
+        .bottom-buttons button {
+            padding: 12px 25px;
+            background-color: #1877f2;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .bottom-buttons button:hover {
+            background-color: #166fe5;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .bottom-buttons .more-info-btn {
+            background-color: #42b883;
+        }
+
+        .bottom-buttons .more-info-btn:hover {
+            background-color: #369870;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 20px;
+            }
+
+            .hero-section h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-section p {
+                font-size: 1.2rem;
+            }
+
+            .login-btn {
+                padding: 15px 40px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <section class="hero-section">
+        <h1>AI Mental Health Support</h1>
+        <p>Welcome to our revolutionary platform designed specifically for students. In today's fast-paced academic
+            environment, mental health challenges are more prevalent than ever. Our AI-powered system provides 24/7
+            support, understanding, and guidance to help you navigate through stress, anxiety, and emotional
+            difficulties.</p>
+        <p>Our mission is to break down the barriers that prevent students from seeking help. Through advanced
+            artificial intelligence, we offer personalized conversations, mood tracking, and access to valuable
+            resources. Whether you're struggling with exam pressure, relationship issues, or simply need someone to
+            listen, our platform is here to support you every step of the way.</p>
+        <p>We believe that every student deserves access to compassionate mental health care, regardless of time or
+            location. Our platform combines the warmth of human empathy with the precision of artificial intelligence to
+            create a supportive environment where you can express yourself freely and receive the help you need.</p>
+    </section>
+
+    <section class="features-section">
+        <h2>Why Choose Our Platform?</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <h3>24/7 Support</h3>
+                <p>Access compassionate AI support anytime, day or night. Our system is always available to listen and
+                    provide guidance when you need it most.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Personalized Conversations</h3>
+                <p>Experience tailored interactions that adapt to your unique needs and circumstances, providing
+                    relevant advice and emotional support.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Mood Tracking</h3>
+                <p>Monitor your emotional well-being over time with our intuitive mood tracking tools, helping you
+                    understand and manage your mental health.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Valuable Resources</h3>
+                <p>Access a curated collection of mental health resources, articles, and tools designed specifically for
+                    students facing academic challenges.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Confidential & Safe</h3>
+                <p>Your privacy is our priority. All conversations are confidential, creating a safe space for you to
+                    express yourself without judgment.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Student-Focused</h3>
+                <p>Designed by students, for students. We understand the unique pressures of academic life and provide
+                    targeted support for your journey.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="bottom-buttons">
+        <button id="bottom-login-btn">Login</button>
+        <button class="more-info-btn" id="bottom-more-info-btn">More Info</button>
+    </div>
+
+    <script>
+        const bottomLoginBtn = document.getElementById('bottom-login-btn');
+        const bottomMoreInfoBtn = document.getElementById('bottom-more-info-btn');
+
+        bottomLoginBtn.addEventListener('click', function () {
+            window.location.href = 'login.html';
+        });
+
+        bottomMoreInfoBtn.addEventListener('click', function () {
+            window.location.href = 'info.html';
+        });
+    </script>
+</body>
+
+</html>

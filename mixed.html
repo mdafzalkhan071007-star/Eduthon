@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced AI Mental Health Support</title>
+    <link rel="stylesheet" href="mixed.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <div class="sidebar" style="position: relative;">
+            <div class="profile">
+                <h3>User Profile</h3>
+                <p id="user-name">Anonymous</p>
+                <p id="user-course"></p>
+                <p id="user-roll">Roll Number: </p>
+                <button id="edit-profile">Edit Profile</button>
+            </div>
+            <div class="mood-tracker">
+                <h3>Mood Tracker</h3>
+                <select id="mood-select">
+                    <option value="happy">Happy</option>
+                    <option value="sad">Sad</option>
+                    <option value="anxious">Anxious</option>
+                    <option value="stressed">Stressed</option>
+                    <option value="neutral">Neutral</option>
+                </select>
+                <button id="log-mood">Log Mood</button>
+                <div id="mood-history"></div>
+            </div>
+            <div class="resources">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="https://www.nami.org/" target="_blank">NAMI</a></li>
+                    <li><a href="https://www.mentalhealth.gov/" target="_blank">MentalHealth.gov</a></li>
+                    <li><a href="https://www.samhsa.gov/find-help/national-helpline" target="_blank">SAMHSA Helpline</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="settings">
+                <h3>Settings</h3>
+                <label><input type="checkbox" id="voice-toggle"> Enable Voice Input</label>
+                <label><input type="checkbox" id="tts-toggle"> Enable Text-to-Speech</label>
+                <button id="dark-mode-toggle">Toggle Dark Mode</button>
+                <button id="go-home-btn" style="margin-top: 20px;">Go to Home</button>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h1>AI Mental Health Support</h1>
+                    <button id="emergency-btn" class="emergency">🚨 Emergency Help</button>
+                </div>
+                <div id="chat-window" class="chat-window">
+                </div>
+                <div class="input-container">
+                    <textarea id="user-input" placeholder="Type your message here..." rows="1"></textarea>
+                    <button id="send-btn">Send</button>
+                    <button id="voice-btn">🎤 Voice</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Check if student is logged in
+        const studentData = JSON.parse(localStorage.getItem('studentData'));
+        if (!studentData) {
+            window.location.href = 'login.html';
+        }
+        // Check if coming from welcome page
+        const urlParams = new URLSearchParams(window.location.search);
+        if (!urlParams.has('fromWelcome')) {
+            window.location.href = 'welcome.html';
+        }
+
+        document.getElementById('go-home-btn').addEventListener('click', function () {
+            window.location.href = 'index.html';
+        });
+    </script>
+    <script src="mixed.js"></script>
+</body>
+
+</html>

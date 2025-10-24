@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to our Web Page</title>
+    <link rel="stylesheet" href="mixed.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .welcome-container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            width: 400px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .welcome-container h1 {
+            color: #1877f2;
+            margin-bottom: 20px;
+        }
+
+        .welcome-container p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .welcome-container button {
+            padding: 12px 24px;
+            background-color: #1877f2;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .welcome-container button:hover {
+            background-color: #166fe5;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="welcome-container">
+        <h1>Welcome to our Web Page</h1>
+        <p id="welcome-message">We're glad you're here. Ready to start your mental health journey?</p>
+        <button id="enter-btn">Enter Chat</button>
+    </div>
+    <script>
+        // Check if student is logged in
+        const studentData = JSON.parse(localStorage.getItem('studentData'));
+        if (!studentData) {
+            window.location.href = 'login.html';
+        } else {
+            document.getElementById('welcome-message').textContent = `Welcome, ${studentData.name}! We're glad you're here. Ready to start your mental health journey?`;
+        }
+
+        document.getElementById('enter-btn').addEventListener('click', function () {
+            window.location.href = 'mixed.html?fromWelcome=true';
+        });
+    </script>
+</body>
+
+</html>

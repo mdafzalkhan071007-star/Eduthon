@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Mental Health Support</title>
+    <link rel="stylesheet" href="mixed.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%),
+                url('https://i.imgur.com/4Z3w2gK.png') no-repeat center center / 200px,
+                url('https://i.imgur.com/8wY4zJf.png') no-repeat top left / 150px,
+                url('https://i.imgur.com/2nX8zLp.png') no-repeat bottom right / 150px;
+            background-size: cover, 200px, 150px, 150px;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .login-form {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            width: 350px;
+            text-align: center;
+        }
+
+        .login-form h2 {
+            margin-bottom: 20px;
+            color: #1877f2;
+            font-size: 24px;
+        }
+
+        .login-form input,
+        .login-form select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .login-form input:focus,
+        .login-form select:focus {
+            border-color: #1877f2;
+            outline: none;
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 12px;
+            background-color: #1877f2;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .login-form button:hover {
+            background-color: #166fe5;
+        }
+
+        .stress-quote {
+            margin-top: 20px;
+            font-style: italic;
+            color: #555;
+            font-size: 14px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <form class="login-form" id="login-form" autocomplete="off">
+            <h2>Student Login</h2>
+            <input type="text" id="student-name" placeholder="Student Name" required autocomplete="off">
+            <select id="course" required autocomplete="off">
+                <option value="">Select Course</option>
+                <option value="Data Science">Data Science</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Information Technology">Information Technology</option>
+                <option value="CSE - AI ML">CSE - AI ML</option>
+            </select>
+            <input type="text" id="roll-number" placeholder="Roll Number" required autocomplete="off">
+            <button type="submit">Login</button>
+            <div id="stress-quote" class="stress-quote"></div>
+        </form>
+    </div>
+    <script src="login.js"></script>
+</body>
+
+</html>
